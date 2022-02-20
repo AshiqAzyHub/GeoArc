@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    function ShowHideDiv() {
+        var Profile = document.getElementById("Profile");
+        var upload = document.getElementById("upload");
+        upload.style.display = Profile.value == "2" ? "block" : "none";
+    }
+</script>
+<span>Select Profile</span>
+    <select id = "Profile" onchange = "ShowHideDiv()">
+    <option value="Profile"></option>  
+<option value="1">Customer</option>  
+<option value="2">Architect</option>  
+<option value="3">Contractor</option>           
+    </select>
+<hr />
+<div id="upload" style="display: none">
+  <form id="upload" actiom="" method="POST" enctype="multipart/form-data" onchange = "ShowHideDiv()">
+<input type="file" name="Uploadfile">
+<input type="submit" value="Upload" name="submit">
+</form>
+</div>
